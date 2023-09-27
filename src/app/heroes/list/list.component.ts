@@ -1,10 +1,24 @@
 import { Component } from '@angular/core';
+import { first } from 'rxjs';
 
 @Component({
   selector: 'app-heroes-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  styleUrls: ['./list.component.css'],
 })
 export class ListComponent {
 
+  public deletedHero?: string;
+
+  public heroNames: string[] = [
+    'Spiderman',
+    'Ironman',
+    'Hulk',
+    'She Hulk',
+    'Thor',
+  ];
+
+  removeLastHero(): void {
+    this.deletedHero = this.heroNames.pop();
+  }
 }
