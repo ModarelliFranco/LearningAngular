@@ -11,11 +11,14 @@
 </ng-template>
 
 <button
-*ngIf="heroNames.length"
-(click)="removeLastHero()" class="btn btn-outline-danger">
+  *ngIf="heroNames.length"
+  (click)="removeLastHero()"
+  class="btn btn-outline-danger">
   Borrar ultimo heroe
 </button>
 
 <ul class="mt-2 list-group">
-  <li *ngFor="let name of heroNames" class="list-group-item">{{ name }}</li>
+  <li *ngFor="let name of heroNames" class="list-group-item">
+    {{ name }}
+  </li>
 </ul>
